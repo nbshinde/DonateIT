@@ -1,0 +1,479 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Donate-IT </title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'assets/images/favicon.png' %}" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Animate CSS -->
+    <link href="{% static 'assets/vendors/animate/animate.css' %}" rel="stylesheet">
+    <!-- Icon CSS-->
+    <link rel="stylesheet" href="{% static 'assets/vendors/font-awesome/css/font-awesome.min.css' %}">
+    <!-- Camera Slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Camera/1.3.4/css/camera.css">
+    <!-- Owlcarousel CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/owl_carousel/owl.carousel.css' %}" media="all">
+    <!--Template Styles CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+</head>
+
+<body id="top">
+    <div class="bg-grediunt">
+        <div class="bg-banner-img ">
+            <div class="overlay-all ">
+                <!-- Header_Area -->
+                <!-- header
+                  ================================================== -->
+                <header class="s-header">
+                    <div class="header-logo">
+                        <a class="navbar-brand logo-biss" href="index.html"> <img src="{% static 'assets/images/donation.png' %}"> </a>
+                    </div>
+
+                    <!-- end header-logo -->
+                    <nav class="header-nav">
+                        <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+                        <div class="header-nav__content">
+                            <h3>DonateIT </h3>
+                            <div class="who_we_area col-md-4 col-sm-6 col-4pad wow fadeInUp">
+
+                                <ul class="header-nav__list">
+                                    <li class=""><a class="" href="">Home</a></li>
+                                    <li><a class="" href="">About</a></li>
+                                    <li><a>Search</a></li>
+                                    <ul class="list-group">
+                                        <a href="" style="margin-left: 20px;">1.Potential Donors </a>
+                                        <a href="" style="margin-left: 20px;">2.Potential Receivers</a>
+                                    </ul>
+                                    <li><a class="" href="">Donate</a></li>
+                                    <li><a class="" href="">Profile</a></li>
+                                    {% if user.is_authenticated %}
+                                    <li><a class="" href="">Logout</a></li>
+                                    {% else %}
+                                    <li><a class="" href="">Login </a></li>
+                                    <li><a class="" href="">Register</a></li>
+                                    {% endif %}
+
+                                </ul>
+
+                            </div>
+                            <!-- end header-nav__content -->
+                    </nav>
+                    <!-- end header-nav -->
+                    <a class="header-menu-toggle" href="#0">
+                        <span class="header-menu-icon"></span>
+                    </a>
+                </header>
+                <!-- end s-header -->
+                <!-- End Header_Area -->
+                <!-- #banner start -->
+                <section id="banner" class=" mb-90">
+                    <div class="container ">
+                        <div class="row">
+                            <!-- #banner-text start -->
+                            <div id="banner-text" class="col-md-7 text-c text-left ">
+                                <h1 class="wow fadeInUp main-h" data-wow-delay="0.2s">DonateIT<br> </h1>
+
+                                <div class="top-banner wow fadeInRight">
+                                    <a id="#services" href="#services" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay=" 0.5s" href="#"><span class="skew_14">Learn More </span></a>
+                                </div>
+                            </div>
+                            <div class=" col-md-5">
+
+                            </div>
+                            <!-- /#banner-text End -->
+                        </div>
+                    </div>
+                </section>
+                <div class="container-fluid p0 banner-shap-img">
+                </div>
+                </div>
+            </div>
+            <!-- /#banner end -->
+            <!--#Our banner-shap- Area -->
+            <!--#EndOur banner-shap- Area -->
+            <!-- #About Us Area start -->
+            <div id="about" class=" py-70 pb_90">
+                <div class="container About-right-bg-img ">
+                    <div class="row text-left  ">
+                        <div class="col-md-7">
+                            <div class="about_left_text wow fadeInUp">
+                                <h1> Donation never makes you poor....! </h1>
+                                <p> Let's contribute to our society by helping needy people in our own way. You don't have to be rich ,smart or beautiful to donate,you just need to care </p>
+
+                                <div class="top-about wow fadeInRight wow fadeInUp">
+                                    <a id="#services" href="#services" class="btn btn-default btn_text_cap btn_bg_f button_py_12   wow fadeInUp  js-scroll-trigger" data-wow-delay=" 0.5s" href="#"><span class="skew_14">Just Do it ! </span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #About Us Area End -->
+
+
+
+            <!--start Hey title Area-right_img -->
+            <section class="">
+                <div class="container-fluid ">
+                    <div class="row text-left about_row_2 clip-polygon_right_2">
+                        <div class="col-md-5 p-0 clip-polygon_left_2 wow fadeInUp">
+                            <div class="video-img">
+                            </div>
+                        </div>
+                        <div class="col-md-7 wow fadeInUp  pl_90 pr_90">
+                            <p class="about_h wow fadeInUp " data-wow-delay=" 0.5s" style="visibility: visible; animation-name: fadeInRight;">Hey , </p>
+                            <p class="about_bottom_h wow fadeInUp " data-wow-delay=" 0.5s" style="visibility: visible; animation-delay:  0.5s; animation-name: fadeInUp;">Want to know how to donate ? </br> Let's explore!</p>
+                            <div class="left-services wow fadeInRight text-right" style="visibility: visible; animation-name: fadeInRight;">
+                                <a id="#services" href="#services" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay=" 0.5s" style="visibility: visible; animation-delay:  0.5s; animation-name: fadeInUp;"><span class="skew_14">Let's Donate </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Hey title Area-right_img -->
+
+        </div>
+    </div>
+    <!--#strat service-text  -->
+    <section class="">
+        <div class="container-fluid ">
+            <div class="row text-left about_row clip-polygon_right ">
+                <div class="col-md-7 wow fadeInUp pl_90 pr_90">
+                    <p class="about_h wow fadeInUp " data-wow-delay=" 0.5s" style="visibility: visible; animation-name: fadeInRight;">Hey ,</p>
+                    <p class="about_bottom_h wow fadeInUp " data-wow-delay=" 0.5s" style="visibility: visible; animation-delay:  0.5s; animation-name: fadeInUp;">Want to connect with needy ones ?<br> Let's see </p>
+                    <div class="left-services_32 wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
+                        <a id="#services" href="#services" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay=" 0.5s" style="visibility: visible; animation-delay:  0.5s; animation-name: fadeInUp;"><span class="skew_14">Let's Connect  </span></a>
+                    </div>
+                </div>
+                <div class="col-md-5 p-0 clip-polygon_left wow fadeInUp">
+                    <div class="video-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- #service Us Area start -->
+    <div id="about" class=" back-right-text-c">
+        <div class="container">
+            <div class="row text-center mb-60 ">
+                <div class="title wow fadeInUp ">
+                    <h2> What we have ? </h2>
+                    <h1>Let's come together to make some difference !</h1>
+                    <p> </p>
+                </div>
+            </div>
+            <div class="row about_row  py-40">
+                <section class="blog-area ptb-140 bg-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12 col">
+                                <div class="blog-wrap mb-30">
+                                    <div class="blog-img">
+                                        <img src="{% static 'assets/images/blog/1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog-content wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                        <div class="blog-meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-whatsapp"></i> Connect</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <h3><a href="blog-single.html">Connect </a></h3>
+                                        <p>Connect to the needy ones</p>
+                                        <a href="blog-single.html" class="btn btn-default btn_font_16">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 col wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-wrap  mb-30">
+                                    <div class="blog-img">
+                                        <img src="{% static 'assets/images/blog/2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-user"></i> Donate</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <h3><a href="blog-single.html">Donate</a></h3>
+                                        <p>Donate whatever you want to donate !</p>
+                                        <a href="blog-single.html" class="btn btn-default btn_font_16">Donate</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 col wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-wrap  mb-30">
+                                    <div class="blog-img">
+                                        <img src="{% static 'assets/images/blog/3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-user"></i>Find Potential Receivers</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3><a href="blog-single.html">Find Potential Receivers</a></h3>
+                                        <p>Donors can find potential receivers so that they can donate without hesitation </p>
+                                        <a href="blog-single.html" class="btn btn-default btn_font_16">Find</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12 mt-50 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-wrap  mb-30">
+                                    <div class="blog-img">
+                                        <img src="{% static 'assets/images/blog/4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-user"></i> Find Potential Donors </a></li>
+
+                                            </ul>
+                                        </div>
+                                        <h3><a href="blog-single.html"> Find Potential Donors </a></h3>
+                                        <p>Receivers can find potential donors to get help</p>
+                                        <a href="blog-single.html" class="btn btn-default btn_font_16">Find</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 mt-50 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-wrap  mb-30">
+                                    <div class="blog-img">
+                                        <img src="{% static 'assets/images/blog/5.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-user"></i>Register NGOs</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3><a href="blog-single.html">Register NGOs</a></h3>
+                                        <p>Register for your NGOs so that you can connect with the great donors</p>
+                                        <a href="blog-single.html" class="btn btn-default btn_font_16">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 mt-50 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="blog-wrap  mb-30">
+                                    <div class="blog-img">
+                                        <img src="{% static 'assets/images/blog/6.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-heart"></i>Acknowledge </a></li>
+                                            </ul>
+                                        </div>
+                                        <h3><a href="blog-single.html">Acknowledge</a></h3>
+                                        <p>Let's share some thanks giving notes to those who helped you in hard times !</p>
+                                        <a href="blog-single.html" class="btn btn-default btn_font_16">Acknowledge</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="pagination-wrap mt-50 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href=""><i class="fa fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--#End service-text  -->
+            </div>
+        </div>
+        <!--#strat service-text  -->
+
+
+
+        <!--#Our Testimonial Area start-->
+        <section id="testimonials" class="testimonial_area row">
+            <div class="container ">
+                <div class="title wow fadeInUp">
+                </div>
+                <div class="testimonial_carosel">
+                    <div class="item">
+                        <div class="text-center">
+                            <div class="img-s ">
+                                <img src="{% static 'assets/images/testimonial-top.png' %}">
+                            </div>
+                            <h4 class="body-slider media-heading">Reviews </h4>
+                            <hr class="slider_hr">
+                        </div>
+                        <p>So glad to see this platform !<br> Required for today's world for sure..<br> Great Work Guys ! </p>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="{% static 'assets/images/testimonial-3.jpg' %}" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Joliya Devson <span class="slider_span_color">- Web Desinger</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class=" text-center">
+                            <div class="img-s ">
+                                <img src="{% static 'assets/images/testimonial-top.png' %}">
+                            </div>
+                            <h4 class="body-slider media-heading">Reviews </h4>
+                            <hr class="slider_hr">
+                        </div>
+                        <p> Now we have a platform where we can connect with really needy people !<br> Wonderful ! </p>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="{% static 'assets/images/testimonial-2.jpg' %}" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Joliya Devson <span class="slider_span_color">- Web Desinger</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class=" text-center">
+                            <div class="img-s ">
+                                <img src="{% static 'assets/images/testimonial-top.png' %}">
+                            </div>
+                            <h4 class="body-slider media-heading">Reviews </h4>
+                            <hr class="slider_hr">
+                        </div>
+                        <p>Nice Idea ! <br> Looking for collaboration for such wonderful ideas in future!</p>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="{% static 'assets/images/testimonial-1.jpg' %}" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Joliya Devson <span class="slider_span_color">- Web Desinger</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#End Our testimonial Area -->
+
+        <div class="our_partners_area ">
+            <div class="book_now_aera ">
+                <div class="container">
+                    <div class="row book_now bg-new">
+                        <div class="col-md-7 booking_text">
+                            <span class="skew_14">
+                        <h4>WHAT ARE YOU WAITING FOR ?</h4>
+                        
+                        <p>To make a difference in someone's life you don't have to<br>
+                            be brilliant, rich, beautiful or perfect.<br>
+                            You just have to care !</p>
+                     </span>
+                        </div>
+                        <div class="col-md-5 p0 book_bottun">
+                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
+                                    <a id="#donate" href="#donate" class="btn btn-primary button_12  wow fadeInUp  js-scroll-trigger" data-wow-delay=" 0.5s" style="visibility: visible; animation-delay:  0.5s; animation-name: fadeInUp;"><span class="skew_14">Let's Contribute</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--#start Our footer Area -->
+        <div class="our_footer_area">
+            <div class="book_now_aera ">
+                <div class="container wow fadeInUp">
+                    <div class="row book_now">
+                        <div class="col-md-4">
+                            <div class="">
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-1 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#End Our footer Area -->
+
+        <div class="hero__overlay">
+            <div class="hero__modal">
+                <a class="hero__close" href="#">Close</a>
+                <iframe allowscriptaccess="always" id="hero-video" class="hero__player" src="https://www.youtube.com/embed/1NSA8ycGfKg?enablejsapi=1&html5=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <!-- /.hero__modal -->
+        </div>
+        <!-- /.hero__overlay -->
+        <!-- jQuery JS -->
+        <script src="{% static 'assets/js/jquery-1.12.0.min.js' %}"></script>
+        <script src="{% static 'assets/vendors/popup/lightbox.min.js' %}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+                    e.preventDefault();
+                    $(this).siblings('a.active').removeClass("active");
+                    $(this).addClass("active");
+                    var index = $(this).index();
+                    $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+                    $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".currency_year").hide();
+                $("#radio1").click(function() {
+                    $(".currency_year").hide();
+                    $(".currency_month").show();
+                });
+                $("#radio2").click(function() {
+                    $(".currency_month").hide();
+                    $(".currency_year").show();
+                });
+            });
+
+            $('.tabs_label').click(function() {
+                $('.tabs_label').removeClass('active_t');
+                $(this).addClass('active_t');
+
+            })
+        </script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <!-- Animate JS -->
+        <script src="{% static 'assets/vendors/animate/wow.min.js' %}"></script>
+        <script src="{% static 'assets/vendors/sidebar/main.js' %}"></script>
+        <!-- Owlcarousel JS -->
+        <script src="{% static 'assets/vendors/owl_carousel/owl.carousel.min.js' %}"></script>
+        <!-- Stellar JS-->
+        <!-- Theme JS -->
+        <script src="{% static 'assets/js/theme.min.js' %}"></script>
+</body>
+
+</html>

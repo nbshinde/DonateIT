@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Contact Page </title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'assets/images/favicon.png' %}" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Animate CSS -->
+    <link href="{% static 'assets/vendors/animate/animate.css' %}" rel="stylesheet">
+    <!-- Icon CSS-->
+    <link rel="stylesheet" href="{% static 'assets/vendors/font-awesome/css/font-awesome.min.css' %}">
+    <!-- Camera Slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Camera/1.3.4/css/camera.css">
+    <!-- Owlcarousel CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendors/owl_carousel/owl.carousel.css' %}"
+        media="all">
+    <!--Template Styles CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" media="all" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+</head>
+
+<body id="top">
+    <div class="about-bg-banner-img">
+        <div class="overlay-all ">
+            <header class="s-header">
+                <div class="header-logo">
+                    <a class="navbar-brand logo-biss" href="index.html"> <img
+                            src="static/assets/images/donation.jpg"></a>
+                </div>
+                <nav class="header-nav">
+                    <div class="header-nav__content">
+                        <h3 style="font-size:1vw">DonateIT </h3>
+
+                    </div>
+                    <!-- end header-nav__content -->
+                </nav>
+                <!-- end header-nav -->
+                <a class="header-menu-toggle" href="#0">
+                    <span class="header-menu-icon"></span>
+                </a>
+            </header>
+            <!-- end s-header -->
+            <!-- End Header_Area -->
+            <!-- #banner start -->
+            <section id="banner" class="py_120">
+                <div class="container ">
+                    <div class="row">
+                        <!-- #banner-text start -->
+                        <div id="banner-text" class="col-md-7 text-c text-left ">
+                            <h5 class="wow fadeInUp main-h font_30" data-wow-delay="0.2s">Welcome To DonateIT
+                                <br><span class="about_text "> </span>
+                            </h5>
+
+                        </div>
+                        <!-- /#banner-text End -->
+                    </div>
+                </div>
+            </section>
+            <!--#Our banner-shap- Area -->
+            <div class="container-fluid p0 banner-shap-img">
+            </div>
+            <!--#EndOur banner-shap- Area -->
+        </div>
+    </div>
+    <!-- /#banner end -->
+    <script type="text/javascript">
+        function ShowHideDiv(item) {
+            var quan = document.getElementById(item.id + "Quan");
+            quan.style.display = item.checked ? "block" : "none";
+        }
+    </script>
+
+    <div class="register-photo">
+        <div class="form-container">
+
+            <h2 class="text-center"><strong>Find</strong> potential receivers</h2>
+
+
+            <form action="{% url 'donor-search' %}" method="POST">
+
+                <label for="items">Choose items you want to donate : </label>
+                <h4>Educational Material</h4>
+
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i1" name="item" value="Pen" onclick="ShowHideDiv(this)" />Pen
+                </label>
+
+                <div id="i1Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Pen" />
+                </div>
+
+                <br>
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i2" name="item" value="Pencil" onclick="ShowHideDiv(this)" />Pencil
+                </label>
+
+                <div id="i2Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Pencil" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i3" name="item" value="Eraser" onclick="ShowHideDiv(this)" />Eraser
+                </label>
+
+                <div id="i3Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Eraser" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i4" name="item" value="Book" onclick="ShowHideDiv(this)" />Book
+                </label>
+
+                <div id="i4Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Book" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i5" name="item" value="Notebook" onclick="ShowHideDiv(this)" />Notebook
+                </label>
+
+                <div id="i5Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Notebook" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i6" name="item" value="Notepads" onclick="ShowHideDiv(this)" />Notepads
+                </label>
+
+                <div id="i6Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Notepads" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i7" name="item" value="Study Table" onclick="ShowHideDiv(this)" />Study
+                    Table
+                </label>
+
+                <div id="i7Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Study Table" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i9" name="item" value="School Bags" onclick="ShowHideDiv(this)" />School
+                    Bags
+                </label>
+
+                <div id="i9Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="School Bags" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i10" name="item" value="Pouch/Compass Box"
+                        onclick="ShowHideDiv(this)" />Compass Box
+                </label>
+
+                <div id="i10Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Pouch/Compass Box" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" name="i11" name="item" value="Ruler" onclick="ShowHideDiv(this)" />Ruler
+                </label>
+
+                <div id="i11Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Ruler" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i12" name="item" value="Sharpner" onclick="ShowHideDiv(this)" />Sharpner
+                </label>
+
+                <div id="i12Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Sharpner" />
+                </div>
+                <br>
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i13" name="item" value="Slate" onclick="ShowHideDiv(this)" />Slate
+                </label>
+
+                <div id="i13Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Slate" />
+                </div>
+                <br>
+
+
+                <h4>Clothings</h4>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i14" name="item" value="Men" onclick="ShowHideDiv(this)" />Men
+                </label>
+
+                <div id="i13Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Men" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i14" name="item" value="Women" onclick="ShowHideDiv(this)" />Women
+                </label>
+
+                <div id="i14Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Women" />
+                </div>
+                <br>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i15" name="item" value="Children" onclick="ShowHideDiv(this)" />Children
+                </label>
+
+                <div id="i15Quan" style="display: none;margin-left: 50px;">
+                    Quantity:
+                    <input type="text" name="Children" />
+                </div>
+                <br>
+
+                <h4>Other</h4>
+
+                <label style="margin-left: 40px;">
+                    <input type="checkbox" id="i16" name="item" value="Money" onclick="ShowHideDiv(this)" />Money
+                </label>
+
+                <div id="i16Quan" style="display: none;margin-left: 50px;">
+                    Amount:
+                    <input type="text" name="Money" />
+                </div>
+                <br>
+
+
+                <br>
+                <br>
+                <button class="btn btn-primary btn-block" type="submit" name="gotItems" value="items">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
+
+    <br><br> {% if count %}
+
+    <h3 id="1">Potential Receivers</h3>
+
+    <table id="2" class="table table-bordered">
+        <thead>
+            <th>Name</th>
+            <th>Postal Address</th>
+            <th>Contact Number</th>
+            <th>Item And Quantity Required</th>
+            <th>Donate</th>
+        </thead>
+        {% for r in result %}
+        <tr>
+            <td>{{ r.name }}</td>
+            <td>{{ r.address }}</td>
+            <td>{{ r.phone }}</td>
+
+            <td>
+                {% for item,quantity in r.form %}
+                <p>{{ item }} - {{ quantity }}</p><br> {% endfor %}
+            </td>
+
+            <td>
+                <form method='POST' action="donate">
+                    <input style="display: none;" name="username" value="{{ r.username }}">
+                    <button class="btn btn-primary" type="submit" name="details" value="{{ r.id }}">Details</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <h3 id="3" style="display: none;">No receivers found to receive book you want to donate.</h3>
+    <h3 id="4" style="display: none;">Please fill out the donation form so that potential receivers can connect with you
+    </h3>
+    <a id="5" style="display: none;" href="{% url 'donor-form' %}" class="btn btn-primary">Fill Form</a> {% endif %}
+
+
+
+
+    <!--#start Our footer Area -->
+    <div class="our_footer_area">
+        <div class="book_now_aera ">
+            <div class="container wow fadeInUp">
+                <div class="row book_now">
+                    <div class="col-md-4">
+                        <div class="">
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-1 ">
+                    </div>
+                    <div class="col-md-3">
+
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /.hero__overlay -->
+    <!-- jQuery JS -->
+    <script src="{% static 'assets/js/jquery-1.12.0.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/popup/lightbox.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+                e.preventDefault();
+                $(this).siblings('a.active').removeClass("active");
+                $(this).addClass("active");
+                var index = $(this).index();
+                $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+                $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- Animate JS -->
+    <script src="{% static 'assets/vendors/animate/wow.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/sidebar/main.js' %}"></script>
+    <!-- Owlcarousel JS -->
+    <script src="{% static 'assets/vendors/owl_carousel/owl.carousel.min.js' %}"></script>
+    <!-- Stellar JS-->
+    <!-- Theme JS -->
+    <script src="{% static 'assets/js/theme.min.js' %}"></script>
+
+</body>
+
+</html>

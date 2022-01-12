@@ -1,0 +1,131 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+
+    <div class="container main">
+        <h1 class="heading-custom">Profile page</h1>
+
+        <section id="PersonalDetails">
+            <h2 class="heading-custom">Personal Details</h2>
+            <p>Username:{{ user.username }}</p>
+            <p>Name:{{user.name}}</p>
+            <p>Postal Address:{{user.postal_address}}</p>
+            <p>Contact Number:{{user.phone}}</p>
+        </section>
+
+        <section id="MyDocuments">
+            <h2 class="heading-custom">My Documents</h2>
+            <p>Aadhar Card:{{user}}</p>
+            <p>Income Certificate:{{user}}</p>
+        </section>
+
+        <section id="Donation">
+            <h2 class="heading-custom">Donation</h2>
+            <br>
+        
+
+            <h3 class="heading-custom">In-Progress</h3>
+            <table id="2" class="table table-bordered">
+                <thead>
+                    <th>Receiver's Name</th>
+                    <th>Receiver's Postal Address</th>
+                    <th>Receiver's Contact Number</th>
+                    <th>Item And Quantity Required</th>
+                    <th>Contact receiver</th>
+                    <th>Cancel Donation</th>
+                    <th></th>
+                </thead>
+
+                {% for request in in_progress %}
+                <tr>
+                    <td>{{ request.receiver.name }}</td>
+                    <td>{{ request.receiver.postal_address}}</td>
+                    {% if request.receiver.phone_show %}
+                        <td>{{ request.receiver.phone}}</td>
+                    {% else %}
+                        <td>-</td>
+                    {% endif %}
+
+                    <td>
+                        {% for item,quantity in request.form %}
+                            <p>{{item}}- {{quantity}}</p>
+                        {% endfor %}
+                    </td>
+
+                    <td >
+                        <a href="{{ direction }}"><img src="{% static 'assets/images/WhatsappIcon.png' %}" width="60" height="80" style="margin-left: 20px;"></a>
+                    </td>
+
+                    <td>
+                        <form method='POST'>
+                            <input style="display: none;" name="receiver" value="{{ receiver.username }}">
+                            <button class="btn btn-primary" onclick="Cancel()"type="submit" name="cancelReq" value="{{ request.id }}">Cancel</button>
+                            <!----<button onclick="Cancel()"</button>------------>
+                            <p id="cancel"></p>
+                            
+                           
+                        </form>
+                    </td>
+
+                    <td>
+                        <form method='POST'>
+                            <input style="display: none;" name="receiver" value="{{ receiver.username }}">
+                            <button class="btn btn-primary" onclick="Sent()" type="submit" name="sent" value="{{ request.id }}">Sent</button>
+                            <p id="sent"></p>
+                        </form>
+                    </td>
+
+                </tr>
+            {% endfor %}
+
+            </table>
+
+            <br>
+            <h3 class="heading-custom">Active</h3>
+            <table id="2" class="table table-bordered">
+                <thead>
+                    <th>Item And Quantity Wanting to Donate</th>
+                    <th>Cancel Donation Information</th>
+                </thead>
+
+                {% for form in active %}
+                <tr>
+                    <td>
+                        {% for item, quantity in form.items %}  
+                            <p>{{item}}- {{quantity}}</p>
+                        {% endfor %}
+                    </td>
+  
+                    <td>
+                        <form method='POST'>
+                            <button class="btn btn-primary" type="submit" name="cancelPosted" value="{{ form.id }}">Cancel</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </table>
+        </section>
+    </div>
+    
+<!-- Confirm box function -->
+        <script>
+            function Cancel() {
+                var x;
+                if (confirm("Are you sure to cancel the donation !") == true) {
+                    x = "Yes!";
+                } else {
+                    x = "Cancel!";
+                }
+                document.getElementById("cancel").innerHTML = x;
+            }
+            function Sent() {
+                var x;
+                if (confirm("Are you sure to send the donation !") == true) {
+                    x = "Yes!";
+                } else {
+                    x = "Cancel!";
+                }
+                document.getElementById("sent").innerHTML = x;
+            }
+        </script>
+
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<script type="text/javascript">
+    function ShowHideDiv(item) {
+        var quan = document.getElementById(item.id + "Quan");
+        quan.style.display = item.checked ? "block" : "none";
+    }
+</script>
+
+
+<form action="{% url 'donor-form' %}" style="margin-left : 50px" method="POST">
+
+    <label for="items">Choose items from list according to your demand : </label>
+    <h4>Educational Material</h4>
+
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i1" name="item" value="Pen" onclick="ShowHideDiv(this)" />Pen
+    </label>
+
+    <div id="i1Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Pen" />
+    </div>
+
+    <br>
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i2" name="item" value="Pencil" onclick="ShowHideDiv(this)" />Pencil
+    </label>
+
+    <div id="i2Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Pencil" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i3" name="item" value="Eraser" onclick="ShowHideDiv(this)" />Eraser
+    </label>
+
+    <div id="i3Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Eraser" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i4" name="item" value="Book" onclick="ShowHideDiv(this)" />Book
+    </label>
+
+    <div id="i4Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Book" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i5" name="item" value="Notebook" onclick="ShowHideDiv(this)" />Notebook
+    </label>
+
+    <div id="i5Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Notebook" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i6" name="item" value="Notepads" onclick="ShowHideDiv(this)" />Notepads
+    </label>
+
+    <div id="i6Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Notepads" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i7" name="item" value="Study Table" onclick="ShowHideDiv(this)" />Study
+        Table
+    </label>
+
+    <div id="i7Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Study Table" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i9" name="item" value="School Bags" onclick="ShowHideDiv(this)" />School
+        Bags
+    </label>
+
+    <div id="i9Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="School Bags" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i10" name="item" value="Pouch/Compass Box" onclick="ShowHideDiv(this)" />Compass Box
+    </label>
+
+    <div id="i10Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Pouch/Compass Box" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" name="i11" name="item" value="Ruler" onclick="ShowHideDiv(this)" />Ruler
+    </label>
+
+    <div id="i11Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Ruler" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i12" name="item" value="Sharpner" onclick="ShowHideDiv(this)" />Sharpner
+    </label>
+
+    <div id="i12Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Sharpner" />
+    </div>
+    <br>
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i13" name="item" value="Slate" onclick="ShowHideDiv(this)" />Slate
+    </label>
+
+    <div id="i13Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Slate" />
+    </div>
+    <br>
+
+
+    <h4>Clothings</h4>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i14" name="item" value="Men" onclick="ShowHideDiv(this)" />Men
+    </label>
+
+    <div id="i13Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Men" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i14" name="item" value="Women" onclick="ShowHideDiv(this)" />Women
+    </label>
+
+    <div id="i14Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Women" />
+    </div>
+    <br>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i15" name="item" value="Children" onclick="ShowHideDiv(this)" />Children
+    </label>
+
+    <div id="i15Quan" style="display: none;margin-left: 50px;">
+        Quantity:
+        <input type="text" name="Children" />
+    </div>
+    <br>
+
+    <h4>Other</h4>
+
+    <label style="margin-left: 40px;">
+        <input type="checkbox" id="i16" name="item" value="Money" onclick="ShowHideDiv(this)" />Money
+    </label>
+
+    <div id="i16Quan" style="display: none;margin-left: 50px;">
+        Amount:
+        <input type="text" name="Money" />
+    </div>
+    <br>
+
+
+    <br>
+    <br>
+    <button class="btn btn-primary btn-block" type="submit" name="gotItems" value="items">Submit</button>
+</form>
+
+{% endblock %}

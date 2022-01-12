@@ -1,1 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
 
+<table id="2" class="table table-bordered">
+    <thead>
+        <th>Name</th>
+        <th>Postal Address</th>
+        <th>Contact Number</th>
+        <th>Item And Quantity Required</th>
+    </thead>
+
+    <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.postal_address }}</td>
+        <td>{{ user.phone }}</td>
+
+        <td>
+            {% for item,quantity in form %}
+            <p>{{ item }} - {{ quantity }}</p><br> {% endfor %}
+        </td>
+    </tr>
+
+</table>
+
+{% if requested %}
+<form method='POST' action="donate">
+    <button class="btn btn-primary" type="submit" name="cancle" value="{{ id }}">Cancle</button>
+</form>
+{% else %}
+<form method='POST' action="donate">
+    <button class="btn btn-primary" type="submit" name="donate" value="{{ id }}">Donate</button>
+</form>
+{% endif %}
+
+
+{% endblock %}
