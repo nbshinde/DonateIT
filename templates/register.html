@@ -1,0 +1,85 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+    <div class="register-photo">
+        <div class="form-container" style=" margin-left:50px ">
+            <!-- <div class="image-holder"></div> -->
+            <form id="form" action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                <h2 class="text-center" style="color: lightcoral"><strong>Create an account</strong></h2>
+
+
+                <h3 class="text-center">Personal Details</h3>
+                <div class="form-group">
+                    <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
+                    <label for="name">Enter your name :</label>
+                    <div class="form-group"><input class="form-control" type="name" name="name" placeholder="name"></div>
+
+                    <label for="username">Create your username :</label>
+                    <div class="form-group"><input class="form-control" type="Username" name="username" placeholder="Username"></div>
+
+                    <label for="password">Create your password :</label>
+                    <div class="form-group"><input class="form-control" type="Password" name="password" placeholder="Password"></div>
+
+                    <label for="Address">Enter Your postal Address :</label>
+                    <div class="form-group"><input class="form-control" type="Address" name="address" placeholder=" postal address"></div>
+
+                    <label for="Contact_No">Enter your Contact Number :</label>
+                    <div class="form-group"><input class="form-control" type="Contact" name="phone" placeholder="Prefer Whatsapp Number"></div>
+
+                    <h5>Would you like to share your contact number with needy people ? </h5>
+                    <select name="phone_show">   
+                        <option value="1">Yes</option>     
+                        <option value="0">No</option>               
+                    </select>
+
+
+                    <div class="form-group">
+                        <label for="category">Choose the category :</label>
+                        <select id="categories" name="category">   
+                        <option value="donor">Donor</option>     
+                        <option value="receiver">Receiver</option>               
+                    </select>
+                    </div>
+
+    
+                    <div id="doc" style = "display: none;">
+                        <p> Please upload your Aadhar Card (Scanned Copy)</p>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input type="file" accept="application/pdf, application/vnd.ms-excel" />
+                        </form>
+
+                        <p>Please upload your Income Certificate( Scanned Copy)</p>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input type="file" accept="application/pdf, application/vnd.ms-excel" />
+                        </form>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <a class="already" href="{% url 'login' %}">You already have an account? Login here.</a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        const select = document.querySelector('#categories');
+        select.addEventListener('change', is_receiver);
+
+        function is_receiver() {
+            const choice = select.value;
+            if (choice === "receiver")
+                document.getElementById('doc').style.display = 'block';
+            else
+                document.getElementById('doc').style.display = 'none';
+        }
+
+    </script>
+
+    {% endblock %}
