@@ -59,9 +59,7 @@
                         <form method='POST'>
                             <input style="display: none;" name="receiver" value="{{ receiver.username }}">
                             <button class="btn btn-primary" onclick="Cancel()"type="submit" name="cancelReq" value="{{ request.id }}">Cancel</button>
-                            <p id="cancel"></p>
-                            
-                           
+                            <p id="cancel"></p>                                                    
                         </form>
                     </td>
 
@@ -105,7 +103,7 @@
         </section>
     </div>
     
-<!-- Confirm box function -->
+<!-- Pop-Up box function starts -->
         <script>
             function Cancel() {
                 var x;
@@ -126,5 +124,6 @@
                 document.getElementById("sent").innerHTML = x;
             }
         </script>
+<!---Pop-Up Box Function End------>
 
 {% endblock %}
